@@ -1,10 +1,13 @@
 import './App.css'
+import Logo from './components/Logo'
 
 const App = () => {
   return (
-    <>
-      <h1>Alura Books</h1>
-    </>
+    <div className='App'>
+      <header className="App-header">
+        <Logo />
+      </header>
+    </div>
   )
 }
 
