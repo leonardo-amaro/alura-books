@@ -6,6 +6,19 @@
 
 .App-header {
   background-color: #f1f1f1;
-  padding: 12px;
+  padding: 32px 16px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.App-header ul {
+  display: flex;
+  gap: 16px;
+}
+
+.App-header ul li {
+  list-style-type: none;
+  cursor: pointer;
+  font-weight: 500;
 }
