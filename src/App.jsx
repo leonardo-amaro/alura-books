@@ -1,4 +1,5 @@
 import './App.css'
+import EstilosGlobais from './components/EstilosGlobais'
 import Logo from './components/Logo'
 import perfil from './images/perfil.svg'
 import sacola from './images/sacola.svg'
@@ -9,6 +10,7 @@ const iconesHeader = [perfil, sacola]
 const App = () => {
   return (
     <div className='App'>
+      <EstilosGlobais />
       <header className="App-header">
         <Logo />
         <ul>
