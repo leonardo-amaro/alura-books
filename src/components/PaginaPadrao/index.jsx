@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import EstilosGlobais from './components/EstilosGlobais'
-import Header from './components/Header'
-import Pesquisa from './components/Pesquisa'
+import Header from '../Header'
+import Pesquisa from '../Pesquisa'
 
 const AppContainer = styled.div`
   min-width: 100vw;
@@ -9,14 +8,13 @@ const AppContainer = styled.div`
   background-image: linear-gradient(90deg, #002F52 35%, #326589);
 `
 
-const App = () => {
+const PaginaPadrao = () => {
   return (
     <AppContainer>
-      <EstilosGlobais />
       <Header />
       <Pesquisa />
     </AppContainer>
   )
 }
 
-export default App
+export default PaginaPadrao
