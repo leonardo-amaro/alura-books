@@ -1,21 +1,11 @@
-import styled from "styled-components"
 import { useEffect, useState } from "react"
 import { getLivros } from "../../services/livros"
+import SectionEstilizada from "../../components/SectionEstilizada"
+import TituloEstilizado from "../../components/TituloEstilizado"
 
 async function fetchLivros() {
   return await getLivros()
 }
-
-const SectionEstante = styled.section`
-  margin-top: 24px;
-  padding: 32px;
-  text-align: center;
-`
-const TituloEstilizado = styled.h1`
-  margin-bottom: 24px;
-  color: #FFF;
-  font-size: 32px;
-`
 
 const Estante = () => {
   const [livros, setLivros] = useState([])
@@ -25,7 +15,7 @@ const Estante = () => {
   }, [])
 
   return (
-    <SectionEstante>
+    <SectionEstilizada>
       <TituloEstilizado>
         Estante
       </TituloEstilizado>
@@ -34,7 +24,7 @@ const Estante = () => {
           (livro) => <li key={livro.id}>{livro.titulo}</li>
         )}
       </ul>
-    </SectionEstante>
+    </SectionEstilizada>
   )
 }
 

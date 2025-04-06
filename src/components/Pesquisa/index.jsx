@@ -1,16 +1,8 @@
 import styled from "styled-components"
+import SectionEstilizada from "../SectionEstilizada"
+import TituloEstilizado from "../TituloEstilizado"
 import InputEstilizado from "../InputEstilizado"
 
-const SectionPesquisa = styled.section`
-  margin-top: 24px;
-  padding: 32px;
-  text-align: center;
-`
-const TituloEstilizado = styled.h1`
-  margin-bottom: 24px;
-  color: #FFF;
-  font-size: 32px;
-`
 const TextoEstilizado = styled.p`
   color: #FFF;
   font-size: 16px;
@@ -19,7 +11,7 @@ const TextoEstilizado = styled.p`
 
 const Pesquisa = () => {
   return (
-    <SectionPesquisa>
+    <SectionEstilizada>
       <TituloEstilizado>
         Já sabe por onde começar?
       </TituloEstilizado>
@@ -30,7 +22,7 @@ const Pesquisa = () => {
         type="text"
         placeholder="Busque sua próxima leitura..." 
       />
-    </SectionPesquisa>
+    </SectionEstilizada>
   )
 }
 
