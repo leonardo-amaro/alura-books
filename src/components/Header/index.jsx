@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import perfil from '../../images/perfil.svg'
 import sacola from '../../images/sacola.svg'
 import Logo from '../Logo'
+import { Link } from 'react-router'
 
-const itensHeader = ['Categorias', 'Favoritos', 'Minha estante']
+const itensHeader = ['Categorias', 'Favoritos', 'Estante']
 const iconesHeader = [perfil, sacola]
 
 const HeaderEstilizado = styled.header`
@@ -26,10 +27,18 @@ const HeaderEstilizado = styled.header`
 const Header = () => {
   return (
     <HeaderEstilizado>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <ul>
         {itensHeader.map(
-          (item, index) => <li key={index}>{item}</li>
+          (item, index) => (
+            <Link to={`/${item.toLowerCase()}`}>
+              <li key={index}>
+                {item}
+              </li>
+            </Link>
+          )
         )}
       </ul>
       <ul>

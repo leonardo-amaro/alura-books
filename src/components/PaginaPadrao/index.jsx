@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Header from '../Header'
-import Pesquisa from '../Pesquisa'
+import { Outlet } from 'react-router'
 
 const AppContainer = styled.div`
   min-width: 100vw;
@@ -8,11 +8,12 @@ const AppContainer = styled.div`
   background-image: linear-gradient(90deg, #002F52 35%, #326589);
 `
 
-const PaginaPadrao = () => {
+const PaginaPadrao = ({ children }) => {
   return (
     <AppContainer>
       <Header />
-      <Pesquisa />
+      <Outlet />
+      {children}
     </AppContainer>
   )
 }
